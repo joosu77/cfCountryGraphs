@@ -3,7 +3,8 @@ import requests
 import json
 import math
 
-data = requests.get(url='https://codeforces.com/api/contest.standings?contestId=1453').json()
+contest = "1453"
+data = requests.get(url='https://codeforces.com/api/contest.standings?contestId='+contest).json()
 allowed = ["Estonia","Latvia","Finland","Norway","Sweden","Poland","Germany","Lithuania","Poland","Belarus","Ukraine","Czechia","Slovakia","Denmark"]
 
 batchSize = 700

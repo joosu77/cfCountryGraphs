@@ -3,7 +3,8 @@ import requests
 import json
 import math
 
-data = requests.get(url='https://codeforces.com/api/contest.standings?contestId=1453').json()
+contest="1453"
+data = requests.get(url='https://codeforces.com/api/contest.standings?contestId='+contest).json()
 
 batchSize = 700
 handles = list({i["party"]["members"][0]["handle"] for i in data["result"]["rows"]})
